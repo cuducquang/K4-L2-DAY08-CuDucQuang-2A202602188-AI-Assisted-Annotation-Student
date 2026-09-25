@@ -1,0 +1,13 @@
+round,frame_id,object,action,rule_or_reason
+1,frame_0182.jpg,"SUV tối bị cắt ở mép dưới giữa ảnh (x 485-623, y 630-720)",added,"Guideline: xe bị cắt ở mép ảnh chỉ vẽ phần nằm trong ảnh; thân tối không có đèn nên model bỏ sót; đúng vị trí rủi ro 2 trong BLIND_SCAN.md"
+1,frame_0182.jpg,"Xe chiều đi bị nhoè ở góc dưới phải (x 948-1140, y 615-720)",added,"Guideline: xe nhoè do chuyển động vẫn gán, box ôm vùng nhoè thân xe, không ôm quầng lóa; đúng vị trí rủi ro 1 trong BLIND_SCAN.md"
+1,frame_0182.jpg,"Box P12 đè lên cùng xe đèn hậu với P8 (x 592-644, y 313-350)",deleted,"Box lỏng trùng một xe đã có box P8; chuyển thành box riêng cho xe xa phía sau (x 596-642, y 305-327) nên round1_diff tính 1 deleted + 1 added"
+1,frame_0270.jpg,"Xe tải thùng lớn giữa ảnh (x 447-557, y 388-524)",added,"Guideline: xe tải và mọi xe từ 4 bánh trở lên là lớp car; model cold start bỏ sót dù xe rõ và lớn"
+1,frame_0312.jpg,"Box P9 gộp làn đường giữa hai xe (x 802-985, y 378-474)",deleted,"Guideline: hai xe sát nhau vẽ hai box riêng, không gộp; box cũ IoU thấp với xe thật nên thay bằng box ôm xe đèn hậu (x 893-985, y 418-472)"
+1,frame_0331.jpg,"Box P15 gộp hai xe đi cạnh nhau (x 442-558, y 392-451)",deleted,"Guideline: hai xe đứng sát nhau vẽ hai box riêng; P14 và P18 đã ôm đúng từng xe nên P15 là false positive trùng"
+1,frame_0331.jpg,"Box P4 trùng box P19 trên cùng một xe (x 865-937, y 342-383)",deleted,"Box lỏng trùng lặp; giữ P19 ôm sát thân xe"
+1,frame_0227.jpg,"Xe tải tối có đèn vàng bên trái (box P10 gốc x 292-423, y 341-494)",edited,"Guideline: box ôm sát thân xe; box gốc ăn cả xe con phía sau nên thu lại còn x 320-423, y 366-490"
+1,frame_0326.jpg,"Xe chiều ngược giữa trái (box P13 gốc x 393-473, y 346-411)",edited,"Box gốc ôm cả phần xe khác phía trên phải; thu về thân xe x 393-457, y 363-411 và thêm box riêng cho xe kia"
+1,frame_0392.jpg,"Xe đèn hậu dưới xe P9 (box P6 gốc x 691-762, y 326-392)",edited,"Guideline: xe bị che chỉ vẽ phần nhìn thấy; box gốc trùm cả xe P9 phía trên nên thu về y 355-392"
+1,frame_0369.jpg,"Dãy xe chiều ngược bật đèn pha bên trái (ví dụ x 327-382, y 402-445)",added,"Guideline: chỉ thấy đèn nhưng đoán được thân xe thì vẽ theo thân; model bỏ sót 13 xe ở frame này, cao trên 16 px nên được tính khi chấm"
+1,frame_0099.jpg,"13 box model đề xuất, ví dụ xe tối có đèn pha dưới trái (x 296-405, y 556-653)",accepted,"Box ôm sát thân xe, không ăn vệt đèn trên mặt đường; giữ nguyên (round1_diff: 13 accepted ở frame này)"
